@@ -1,0 +1,436 @@
+<!DOCTYPE HTML>
+<!--
+	Jameel by arathemes
+	arathemes.com | @muath_obeidat
+	Free for personal and commercial use under the CCA 3.0 license (arathemes.com/license)
+-->
+<html dir="rtl">
+	<head>
+		<title>مشروع غصن</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+<style>
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.div1 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+/*{}{}{}{}{}{}{}*/
+.button {
+  background-color: #f2f2f2;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button5:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+/*{}{}{}{}{}{}{}*/
+* {
+  box-sizing: border-box;
+}
+
+.html,
+.body {
+  height: 100%;
+}
+
+.body {
+  background: #F4F2F3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  cursor: pointer;
+}
+
+svg {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.15rem;
+}
+
+
+/* hide radio buttons */
+
+input[name="star"] {
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  margin-left: -2px;
+}
+
+/* hide source svg */
+
+.star-source {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+
+/* set initial color to transparent so fill is empty*/
+
+.star {
+  color: transparent;
+  transition: color 0.2s ease-in-out;
+}
+
+
+/* set direction to row-reverse so 5th star is at the end and ~ can be used to fill all sibling stars that precede last starred element*/
+
+.star-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+label:hover ~ label .star,
+svg.star:hover,
+input[name="star"]:focus ~ label .star,
+input[name="star"]:checked ~ label .star {
+  color: #d62a9d;
+}
+
+input[name="star"]:checked + label .star {
+  animation: starred 0.5s;
+}
+
+input[name="star"]:checked + label {
+  animation: scaleup 1s;
+}
+
+@keyframes scaleup {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes starred {
+  from {
+    color: #600040;
+  }
+  to {
+    color: #d62a9d;
+  }
+}
+
+</style>
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Logo -->
+									<h1><a href="index.html" id="logo">غصن</a></h1>
+
+								<!-- Nav -->
+									<nav id="nav">
+										<a href="index.html">الرئيسية</a>
+										<a href="threecolumn.html">الموردين</a>
+										<a href="twocolumn1.html">المنتجات</a>
+										<a href="twocolumn2.html">سجل معنا</a>
+										<a href="onecolumn.html">من نحن</a>
+									</nav>
+
+							</div>
+						</div>
+					</div>
+					<div id="banner">
+						<div class="container">
+							<div class="row">
+								<div class="col-6 col-12-medium">
+
+									<!-- Banner Copy -->
+										<p>ل التسجيل منصة غصن</p>
+										<a href="register.html" class="button-large">اضغط</a>
+
+								</div>
+								<div class="col-6 col-12-medium imp-medium">
+
+									<!-- Banner Image -->
+										<a href="#" class="bordered-feature-image"><img src="images/banner.jpg" alt="" /></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Features -->
+				<section id="features">
+					<div class="container">
+						<div class="row">
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Feature #1 -->
+									<section>
+										<a href="https://akhbaar24.argaam.com/" class="bordered-feature-image"><img src="images/AA1.jpg" width="262" height="110" /></a>
+										<h2><a href ="https://akhbaar24.argaam.com/">اخبار24</a></h2>
+										<p>
+										   معالي مدير عام الجوازات الفريق سليمان اليحيى يقف على سير العمل في جوازات مطار الملك عبدالعزيز الدولي
+										</p>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Feature #2 -->
+									<section>
+										<a href="https://www.bing.com/aclick?ld=e8N9fEavKA7ksCqMPzy_SQsDVUCUx19xy48v09btR-MVQrMJVl_D4xuaIcmSZEeLqxWsBRmRWKT6k3K1jcJFKKgxI2nsNBHr3puk6qZgCybKs4MBM4ktU7RGDLzApbCJlDWaTL5hG_vlo3ZVhaMnUpKqCzp8_KEst0cuBuyJiOS_B-U9EDZwW1tzR11jmrUdH6RdaYKA&u=aHR0cHMlM2ElMmYlMmZjbGlja3NlcnZlLmRhdGVzZWFyY2gubmV0JTJmbGluayUyZmFsaWV4cHJlc3MlMmYlM2ZsaWQlM2Q0MzcwMDAzNzM1NzczODc0NSUyNmRzX2VfbWF0Y2h0eXBlJTNkc2VhcmNoJTI2ZHNfZV9kZXZpY2UlM2RjJTI2ZHNfdXJsX3YlM2QyJTI2ZHNfZGVzdF91cmwlM2RodHRwcyUzYSUyZiUyZnd3dy5hbGlleHByZXNzLmNvbSUyZiUzZnNyYyUzZGJpbmclMjZhbGJjaCUzZHNlYXJjaCUyNmFjbnQlM2QxNjAzMjE3JTI2aXNkbCUzZHklMjZhZmZfc2hvcnRfa2V5JTNkVW5lTUpaVmYlMjZhbGJjcCUzZDEzMzU1ODk0MSUyNiUyNnRyZ3QlM2Rrd2QtODQxMTM3MzE5MjY5NTYlM2Fsb2MtMjE2JTI2a2QlM2RhbGlleHByZXNzJTI2Y3JlYSUzZDgxNTE3NzAzMDA0MjEzJTI2bmV0dyUzZG8lMjZkZXZpY2UlM2RjJTI2bXRjdHAlM2RlJTI2bXNjbGtpZCUzZDk5NzI4NmFiMTQ3ODFjMTAxMjU5ZTJmYTIyMDQ4ZmI0JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkQUUtTWluaS1saWZlLUJORyUyNnV0bV90ZXJtJTNkYWxpZXhwcmVzcyUyNnV0bV9jb250ZW50JTNkTA&rlid=997286ab14781c101259e2fa22048fb4&ntb=1&ntb=1" class="bordered-feature-image"><img src="images/A1.jpg" width="262" height="110" /></a>
+										<h2><a href ="https://www.bing.com/aclick?ld=e8N9fEavKA7ksCqMPzy_SQsDVUCUx19xy48v09btR-MVQrMJVl_D4xuaIcmSZEeLqxWsBRmRWKT6k3K1jcJFKKgxI2nsNBHr3puk6qZgCybKs4MBM4ktU7RGDLzApbCJlDWaTL5hG_vlo3ZVhaMnUpKqCzp8_KEst0cuBuyJiOS_B-U9EDZwW1tzR11jmrUdH6RdaYKA&u=aHR0cHMlM2ElMmYlMmZjbGlja3NlcnZlLmRhdGVzZWFyY2gubmV0JTJmbGluayUyZmFsaWV4cHJlc3MlMmYlM2ZsaWQlM2Q0MzcwMDAzNzM1NzczODc0NSUyNmRzX2VfbWF0Y2h0eXBlJTNkc2VhcmNoJTI2ZHNfZV9kZXZpY2UlM2RjJTI2ZHNfdXJsX3YlM2QyJTI2ZHNfZGVzdF91cmwlM2RodHRwcyUzYSUyZiUyZnd3dy5hbGlleHByZXNzLmNvbSUyZiUzZnNyYyUzZGJpbmclMjZhbGJjaCUzZHNlYXJjaCUyNmFjbnQlM2QxNjAzMjE3JTI2aXNkbCUzZHklMjZhZmZfc2hvcnRfa2V5JTNkVW5lTUpaVmYlMjZhbGJjcCUzZDEzMzU1ODk0MSUyNiUyNnRyZ3QlM2Rrd2QtODQxMTM3MzE5MjY5NTYlM2Fsb2MtMjE2JTI2a2QlM2RhbGlleHByZXNzJTI2Y3JlYSUzZDgxNTE3NzAzMDA0MjEzJTI2bmV0dyUzZG8lMjZkZXZpY2UlM2RjJTI2bXRjdHAlM2RlJTI2bXNjbGtpZCUzZDk5NzI4NmFiMTQ3ODFjMTAxMjU5ZTJmYTIyMDQ4ZmI0JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkQUUtTWluaS1saWZlLUJORyUyNnV0bV90ZXJtJTNkYWxpZXhwcmVzcyUyNnV0bV9jb250ZW50JTNkTA&rlid=997286ab14781c101259e2fa22048fb4&ntb=1&ntb=1">aliexpress</a></h2>
+										<p>
+										   تخفيضات الربيع
+										</p>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Feature #3 -->
+									<section>
+										<a href="https://www.youtube.com/" class="bordered-feature-image"><img src="images/Y1.jpg" width="262" height="110" /></a>
+										<h2><a href ="https://www.youtube.com/">youtube</a></h2>
+										<p>
+										   اشترك ب يوتيوب برو 
+										</p>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Feature #4 -->
+									<section>
+										<a href="https://www.playstation.com/ar-sa/" class="bordered-feature-image"><img src="images/S1.jpg" width="262" height="110" /></a>
+										<h2><a href ="https://www.playstation.com/ar-sa/">playstation</a></h2>
+										<p>
+											تخفيضات الجمعة السوداء قد بدات
+										</p>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Content -->
+				<section id="content">
+					<div class="container">
+						<div class="row aln-center">
+							<div class="col-4 col-12-medium">
+
+								<!-- Box #1 -->
+									<section>
+										<header>
+											<h2>من نحن</h2>
+											<h3>مبادرة تهدف لتمكين وزيادة وعي الفرد في تنمية الغطاء النباتي في المملكة العربية السعودية واثره على البيئة</h3>
+										</header>
+										<a href="#" class="feature-image"><img src="images/P1.jpg" width="324" height="126" /></a>
+										<p>الخدمة تستهدف الأفراد والمنشآت والجمعيات التطوعية</p>
+									</section>
+
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Box #2 -->
+									<section>
+										<header>
+											<h2>ماذا نفعل</h2>
+											<h3>رفع مستوى الوعي الزراعي للمواطنين للنباتات</h3>
+										</header>
+										<ul class="check-list">
+											<li>زيادة المساحة الخضراء</li>
+											<li>جعل اجواء المملكة أفضل مناخياً</li>
+											<li>خفض درجة الحرارة بالمملكة</li>
+											<li>تعزيز طلاب المدارس بالتطوع في زراعة الأشجار</li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Box #3 -->
+									<section>
+										<header>
+											<h2>ماذا يقول الناس</h2>
+											<h3>بعض الأراء</h3>
+										</header>
+										<ul class="quote-list">
+											<li>
+												<!-- <img src="images/pic06.jpg" alt="" />
+												<p>قيد التطوير</p>
+												<span>عبد الله العبري</span> -->
+											</li>
+											<li>
+												<!-- <img src="images/pic07.jpg" alt="" />
+												<p>قيد التطوير</p>
+												<span>عبد الرحمن المزيد</span> -->
+											</li>
+											<li>
+												<!-- <img src="images/pic08.jpg" alt="" />
+												<p>قيد التطوير</p>
+												<span>عبد الله البقمي</span> -->
+											</li>
+											<li>
+												<!-- <img src="images/pic08.jpg" alt="" />
+												<p>قيد التطوير</p>
+												<span>عبد الله العوهلي</span> -->
+											</li>
+											<li>
+
+												<div class="div1">
+													<form action="/action_page.php">
+													  <label for="fname">اسمك الثلاثي</label>
+													  <input type="text" id="fname" name="اسمك الثلاثي" placeholder="أضغط للكتابة">
+												  
+													  <label for="lname">تعليقك</label>
+													  <input type="text" id="lname" name="تعليقك" placeholder="أظغط للكتابة">
+													</form>
+												</div>
+												<!---->
+												<div class="star-source">
+													<svg>
+														   <linearGradient x1="50%" y1="5.41294643%" x2="87.5527344%" y2="65.4921875%" id="grad">
+															  <stop stop-color="#bf209f" offset="0%"></stop>
+															  <stop stop-color="#d62a9d" offset="60%"></stop>
+															  <stop stop-color="#ED009E" offset="100%"></stop>
+														  </linearGradient>
+													  <symbol id="star" viewBox="153 89 106 108">   
+														<polygon id="star-shape" stroke="url(#grad)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+													  </symbol>
+												  </svg>
+												  
+												  </div>
+												  <div class="star-container">
+													<input type="radio" name="star" id="five">
+													<label for="five">
+													  <svg class="star">
+														<use xlink:href="#star"/>
+													  </svg>
+													</label>
+													<input type="radio" name="star" id="four">
+													<label for="four">
+													  <svg class="star">
+														<use xlink:href="#star"/>
+													  </svg>
+													</label>
+													<input type="radio" name="star" id="three">
+													<label for="three">
+													  <svg class="star">
+														<use xlink:href="#star"/>
+													  </svg>
+													</label>
+													<input type="radio" name="star" id="two">
+													<label for="two">
+													  <svg class="star">
+														<use xlink:href="#star" />
+													  </svg>
+													</label>
+													<input type="radio" name="star" id="one">
+													<label for="one">
+													 <svg class="star">
+													  <use xlink:href="#star" />
+													 </svg>
+													</label>
+												  
+												  </div>
+												<!---->
+												<center><button class="button button5">أضافة التعليق</button></center>
+
+											</li>
+										</ul>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-8 col-12-medium">
+
+								<!-- Links -->
+									<section>
+										<h2>روابط مهمة</h2>
+										<div>
+											<div class="row">
+												<div class="col-3 col-12-small">
+													<ul class="link-list last-child">
+														<li><a href="#">اتصل بنا</a></li>
+														<li><a href="#">من نحن</a></li>
+														<li><a href="#">مساعدة</a></li>
+														<li><a href="#">فريق غصن</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium imp-medium">
+
+								<!-- Blurb -->
+									<section>
+										<h2>معلومات أخرى</h2>
+										<p>
+											
+										</p>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Copyright 
+				<div id="copyright">
+					&copy; العبري<a href="http://arathemes.com">Kira</a>
+				</div> -->
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
